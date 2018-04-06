@@ -142,7 +142,7 @@ header .logo h1 {
 header .nav-links {
     margin-left: 170px; /* проверить размер*/
     margin-top: 2px;
-    width: 823px;
+    width: auto;
     height: 72px;
 
     display: inline-block;
@@ -178,17 +178,19 @@ header .header-social-icons {
     display: inline-block;
     float: left;
     margin-top: 47px;
+    font-size: 0;
+
 
 }
 
 header .header-social-icons a i {
-    width: 35px;
-    height: 21px;
+    width: 25px;
+    height: 10px;
     color: #dab33e;
     font-size: 21px;
     font-weight: 400;
     margin-top: 5px;
-
+    margin-right: 14px;
 }
 
 .header-social-icons a i:hover {
@@ -757,7 +759,7 @@ section.wrapper.menu ul li {
     height: 36px;
     float: left;
 
-    border: 1px solid #c89f2d;
+    border: 1px solid  #7c7c7c;
     background-color: rgba(255, 255, 255, 0.4);
     display: inline-block;
     position: relative;
@@ -794,12 +796,14 @@ input, select {
     font-style: italic;
     text-indent: 15px;
 
+
 }
 
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
     /* appearance: none;*/
+    cursor: pointer;
 }
 
 #select-party label {
@@ -831,10 +835,50 @@ input#datepicker {
     margin-left: 28px;
 }
 
+
+.unstyled[type="date"]::-webkit-inner-spin-button {
+    visibility: hidden;
+}
+
+.unstyled[type="date"]:focus{
+    text-indent: 10px;
+    padding: 0;
+}
+
+.unstyled[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    margin-right: 5px;
+    z-index: 2;
+}
+
+
+
+
+
+.input-data select:hover, .input-data select:hover {
+    border: 1px solid gold;
+    padding: 0;
+}
+
+.input-data select:focus, .input-data select:focus {
+    outline: none;
+    border: 1px solid #c89f2d;
+}
+
+.input-data input:hover, .input-data input:hover {
+    border: 1px solid gold;
+    padding: 0;
+}
+
+.input-datat input:focus, .input-data input:focus {
+    outline: none;
+    border: 1px solid #c89f2d;
+}
+
+
 .contacts .input-fields-footer {
     width: 200px;
     height: 36px;
-    border: 1px solid #c89f2d;
     color: #ffffff;
     font-family: "Open Sans", sans serif;
     font-size: 16px;
@@ -849,6 +893,7 @@ input#datepicker {
 
 .input-fields-footer:focus {
     outline: none;
+    border: 1px solid #c89f2d;
 }
 
 .input-fields-footer:hover {
@@ -858,6 +903,7 @@ input#datepicker {
 
 .input-fields-footer:active {
     color: #ffffff;
+    border: 1px solid #c89f2d;
 }
 
 /*FOOTER*/
