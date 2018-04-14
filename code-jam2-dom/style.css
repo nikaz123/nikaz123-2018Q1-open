@@ -1,0 +1,111 @@
+
+body {
+}
+
+#overlay {
+    width: 400px;
+    height: 300px;
+    border: solid 1px black;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    display: none;
+    background: rgba(220, 252, 255, 0.65);
+    z-index: 999;
+    animation: fade .6s;
+    overflow: auto;
+
+}
+
+.close {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    outline: none;
+
+}
+
+h4 {
+    text-align: center;
+}
+
+ul.jokes {
+    height: 130px;
+    width: 400px;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+#carousel ul.jokes li {
+    list-style-type: none;
+    display: inline-block;
+    width: 300px;
+    height: 130px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: 1px solid #382a23;
+}
+
+#carousel ul.jokes li span {
+
+    width: 250px;
+    height: 130px;
+    color: #382a23;
+    font-size: 14px;
+
+}
+
+.checkPart {
+    position: relative;
+    margin-left: 15px;
+    width: 350px;
+    height: 20px;
+    margin-top: 20px;
+    display: inline-block;
+
+}
+.removePopup {
+    display: inline-block;
+    float: left;
+}
+
+.chaingeText {
+    display: inline-block;
+    float: left;
+    width: 300px;
+    margin-left: 25px;
+
+}
+
+.prev {
+    display: inline-block;
+    float: left;
+    border-radius: 50%;
+    border: 1px solid #636363;
+}
+
+ul.dots {
+    display: inline-block;
+    float: left;
+    width: 150px;
+    height: 40px;
+    padding-left: 0;
+}
+
+ul.dots li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    color: black;
+    float: left;
+}
+
+.next {
+    display: inline-block;
+    float: left;
+    border-radius: 50%;
+    border: 1px solid #636363;
+}
