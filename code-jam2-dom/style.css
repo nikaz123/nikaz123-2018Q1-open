@@ -1,11 +1,14 @@
 
 body {
+    width: 1000px;
+    margin: 0 auto;
+    height: 100%;
 }
 
 #overlay {
     width: 400px;
     height: 300px;
-    border: solid 1px black;
+    border: solid 2px #6c6c6c;
     position: fixed;
     top: 40px;
     right: 40px;
@@ -14,6 +17,7 @@ body {
     z-index: 999;
     animation: fade .6s;
     overflow: auto;
+    border-radius: 10px;
 
 }
 
@@ -24,6 +28,9 @@ body {
     margin-top: 10px;
     cursor: pointer;
     outline: none;
+    border-radius: 10px;
+    border: 1px solid #636363;
+
 
 }
 
@@ -33,6 +40,8 @@ body {
 
 h4 {
     text-align: center;
+    font-size: 20px;
+    margin: 10px 0;
 }
 
 
@@ -43,8 +52,9 @@ h4 {
     height: 140px;
     margin-right: 5px;
     margin-left: 5px;
-    border: 1px solid #382a23;
+    border: 2px solid #666666;
     background-color: ghostwhite;
+    border-radius: 10px;
 }
  #carousel p {
      margin-left: 10px;
@@ -56,10 +66,14 @@ h4 {
     position: relative;
     margin-left: 15px;
     width: 350px;
-    height: 20px;
+    height: 50px;
     margin-top: 20px;
     display: inline-block;
 
+}
+label {
+    width: 160px;
+    height: 40px;
 }
 .removePopup {
     display: inline-block;
@@ -69,8 +83,9 @@ h4 {
 .changeText {
     display: inline-block;
     float: left;
-    width: 300px;
-    margin-left: 25px;
+    width: 240px;
+    height: 40px;
+    margin-left:135px;
 
 }
 
@@ -79,14 +94,18 @@ h4 {
     float: left;
     border-radius: 50%;
     border: 1px solid #636363;
+    cursor: pointer;
+    outline: none;
 }
 
 ul.dots {
     display: inline-block;
     float: left;
-    width: 150px;
+    width: 120px;
     height: 40px;
     padding-left: 0;
+    margin-top: 3px;
+    margin-left: 40px;
 }
 
 ul.dots li {
@@ -95,6 +114,8 @@ ul.dots li {
     height: 20px;
     color: rgb(154, 154, 154);
     float: left;
+    font-size: 20px;
+    list-style-type: circle;
 }
 
 ul.dots li.redpoint {
@@ -107,4 +128,65 @@ ul.dots li.redpoint {
     float: left;
     border-radius: 50%;
     border: 1px solid #636363;
+    cursor: pointer;
+    outline: none;
+}
+
+             /* СТИЛИ ДЛЯ РЫБЫ*/
+header  {
+    position: relative;
+    width: 1000px;
+    height: 150px;
+}
+
+
+
+.logo {
+    display: inline-block;
+    margin-left:50px;
+    float: left;
+}
+nav {
+    display: inline-block;
+    margin-left: 100px;
+}
+nav ul li {
+    display: inline-block;
+    float: left;
+    font-size: 24px;
+    padding:0 30px;
+
+}
+
+
+
+main {
+    position: relative;
+    height: 1000px;
+}
+main .aside {
+    padding:20px 20px;
+    display: inline-block;
+    float: left;
+    left:0;
+    width:300px;
+    background-color: #dcfcff;
+    height:100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+main .main {
+    display: inline-block;
+    float: left;
+    left:35%;
+    width:660px;
+    height:100%;
+    padding:20px;
+}
+
+
+footer {
+    height:100px;
+    width: 1000px;
+    background-color: #9a9a9a;
 }
