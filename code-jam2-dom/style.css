@@ -27,36 +27,30 @@ body {
 
 }
 
+.mainText {
+    margin-left: 40px;
+}
+
 h4 {
     text-align: center;
 }
 
-ul.jokes {
-    height: 130px;
-    width: 400px;
-    margin: 0;
-    padding: 0;
-    font-size: 0;
-}
 
-#carousel ul.jokes li {
+#carousel  {
     list-style-type: none;
     display: inline-block;
     width: 300px;
-    height: 130px;
+    height: 140px;
     margin-right: 5px;
     margin-left: 5px;
     border: 1px solid #382a23;
+    background-color: ghostwhite;
 }
+ #carousel p {
+     margin-left: 10px;
 
-#carousel ul.jokes li span {
+ }
 
-    width: 250px;
-    height: 130px;
-    color: #382a23;
-    font-size: 14px;
-
-}
 
 .checkPart {
     position: relative;
@@ -72,7 +66,7 @@ ul.jokes {
     float: left;
 }
 
-.chaingeText {
+.changeText {
     display: inline-block;
     float: left;
     width: 300px;
@@ -96,12 +90,17 @@ ul.dots {
 }
 
 ul.dots li {
-    display: inline-block;
+
     width: 20px;
     height: 20px;
-    color: black;
+    color: rgb(154, 154, 154);
     float: left;
 }
+
+ul.dots li.redpoint {
+    color: rgb(255, 19, 61);
+}
+
 
 .next {
     display: inline-block;
