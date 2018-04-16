@@ -63,17 +63,20 @@ h4 {
 
 
 .checkPart {
-    position: relative;
+   /* position: relative;*/
     margin-left: 15px;
     width: 350px;
     height: 50px;
-    margin-top: 20px;
+    margin-top: 45px;
     display: inline-block;
 
 }
 label {
-    width: 160px;
+    width: 112px;
     height: 40px;
+    display: inline-block;
+    float: left;
+    margin-right:  16px;
 }
 .removePopup {
     display: inline-block;
@@ -83,9 +86,9 @@ label {
 .changeText {
     display: inline-block;
     float: left;
-    width: 240px;
+    width: 214px;
     height: 40px;
-    margin-left:135px;
+   
 
 }
 

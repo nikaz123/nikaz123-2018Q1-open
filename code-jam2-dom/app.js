@@ -3,7 +3,7 @@
 let currentJoke = 0;
 
 if (localStorage['check'] == 0) {
-    setTimeout("document.getElementById('overlay').style.display='block'", 1)
+    setTimeout("document.getElementById('overlay').style.display='block'", 5000)
 }
 
 /* сохранили значение checkbox в Local Storage*/
