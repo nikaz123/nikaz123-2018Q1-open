@@ -1,0 +1,361 @@
+@font-face {
+  font-family: 'Acme';
+  src: url('../fonts/acme/Acme-Regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../fonts/josefin/JosefinSans-Regular.ttf');
+  font-weight: 400;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: url(../images/sea_pattern_1_big.png) repeat center;
+  width: 1600px;
+  margin: 30px auto;
+  height: 1000px;
+  /*   FOOTER*/
+}
+body h2 {
+  text-align: center;
+  font-size: 45px;
+  padding-top: 30px;
+  font-family: 'Acme', sans-serif;
+}
+body h3 {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Acme', sans-serif;
+}
+body .wrapper {
+  width: 1600px;
+  height: 900px;
+  background-color: #8dc4b7;
+  position: relative;
+  min-height: calc(-220%);
+  /*HEADER*/
+  /*MAIN*/
+  /*   SECTION WELCOME-PART*/
+}
+body .wrapper header {
+  width: 1600px;
+  height: 100px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0));
+}
+body .wrapper header h1 {
+  font-size: 60px;
+  font-family: 'Acme', sans-serif;
+  color: rgba(249, 249, 249, 0.71);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+body .wrapper main {
+  /*SECTION GAME-WINDOW*/
+  /* BUTTON STOP*/
+}
+body .wrapper main .welcome-part {
+  display: inline-block;
+  width: 1600px;
+  height: 800px;
+  position: relative;
+}
+body .wrapper main .welcome-part .errorMessage {
+  width: 400px;
+  height: 100px;
+  background-color: rgba(228, 230, 216, 0.8);
+  border: 4px solid #258aa8;
+  margin-left: -330px;
+  margin-top: 58px;
+  text-align: center;
+  font-size: 40px;
+  color: red;
+  padding-top: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+  position: absolute;
+}
+body .wrapper main .welcome-part form {
+  float: left;
+  width: 870px;
+  height: 800px;
+}
+body .wrapper main .welcome-part form .inputPlayerProfile {
+  width: 870px;
+  height: 777px;
+  display: inline-block;
+  float: left;
+}
+body .wrapper main .welcome-part form .inputPlayerProfile .players-name-lastname-email {
+  height: 250px;
+  font-size: 16px;
+  margin-top: 40px;
+  margin-left: 40px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+body .wrapper main .welcome-part form .inputPlayerProfile .players-name-lastname-email h3 {
+  width: 550px;
+}
+body .wrapper main .welcome-part form .inputPlayerProfile .players-name-lastname-email .input-data {
+  width: 331px;
+  height: 50px;
+  margin-top: 20px;
+}
+body .wrapper main .welcome-part form .inputPlayerProfile .players-name-lastname-email .input-data label {
+  font-size: 25px;
+  margin-left: 40px;
+  width: 300px;
+  height: 30px;
+  margin-right: 15px;
+}
+body .wrapper main .welcome-part form .inputPlayerProfile .players-name-lastname-email .input-data input {
+  border: solid 2px #f9f9f9;
+  border-radius: 8px;
+  background-color: #e2e2e2;
+  padding-left: 10px;
+  height: 25px;
+  margin-left: 40px;
+}
+body .wrapper main .welcome-part form .inputPlayerProfile .game-difficulty {
+  margin-left: 40px;
+}
+body .wrapper main .welcome-part form .inputPlayerProfile .game-difficulty p {
+  font-family: 'Josefin Sans', sans-serif;
+  height: 40px;
+  font-size: 30px;
+}
+body .wrapper main .welcome-part form .inputPlayerProfile .game-difficulty p input {
+  margin-right: 10px;
+}
+body .wrapper main .welcome-part form .inputPlayerProfile .game-difficulty h3 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 550px;
+}
+body .wrapper main .welcome-part form .inputPlayerProfile .shirt-cards {
+  margin-left: 40px;
+}
+body .wrapper main .welcome-part form .inputPlayerProfile .shirt-cards h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  width: 550px;
+}
+body .wrapper main .welcome-part form .inputPlayerProfile .shirt-cards label {
+  display: inline-block;
+  margin: 0 4px;
+  width: 120px;
+  height: 150px;
+}
+body .wrapper main .welcome-part form .inputPlayerProfile .shirt-cards label img {
+  width: 120px;
+  height: 150px;
+  margin-right: 25px;
+}
+body .wrapper main .welcome-part form .inputPlayerProfile .shirt-cards .radioShirt {
+  width: 150px;
+  display: inline-block;
+  float: left;
+  margin-top: 50px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  visibility: hidden;
+  position: absolute;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+body .wrapper main .welcome-part form .inputPlayerProfile .shirt-cards .radioShirt:checked + label {
+  border: 4px solid #f00;
+}
+body .wrapper main .welcome-part form .begin-new-game {
+  margin-left: 720px;
+  width: 150px;
+  height: 75px;
+  display: inline-block;
+  float: right;
+  font-size: 40px;
+  font-weight: 700;
+  color: #e2e2e2;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+  text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+  outline: none;
+  border-radius: 3px;
+  background: linear-gradient(#6e7078, #515156) #6e7078;
+  box-shadow: 0 1px rgba(255, 255, 255, 0.2) inset, 0 3px 5px rgba(0, 1, 6, 0.5), 0 0 1px 1px rgba(0, 1, 6, 0.2);
+}
+body .wrapper main .welcome-part form .begin-new-game .begin-new-game:hover:not(:active) {
+  background: linear-gradient(#7e7e86, #46474c) #7e7e86;
+}
+body .wrapper main .welcome-part form .begin-new-game .begin-new-game:active {
+  top: 1px;
+  background: linear-gradient(#4c4d52, #38393e) #4c4d52;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5) inset, 0 2px 3px rgba(0, 0, 0, 0.5) inset, 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+body .wrapper main .welcome-part .rules {
+  display: inline-block;
+  width: 550px;
+  height: 800px;
+  float: left;
+  margin-left: 70px;
+}
+body .wrapper main .welcome-part .rules h3 {
+  padding-top: 50px;
+}
+body .wrapper main .welcome-part .rules p {
+  padding-top: 25px;
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+body .wrapper main .welcome-part .rules .top10 {
+  display: inline-block;
+  float: left;
+  width: 550px;
+}
+body .wrapper main .welcome-part .rules .top10 .results p {
+  width: 500px;
+  padding-top: 10px;
+  padding-left: 20px;
+  height: 25px;
+  border: 1px solid #57a299;
+  margin-left: 25px;
+  border-radius: 8px;
+  text-align: left;
+  background-color: antiquewhite;
+}
+body .wrapper main .game-window {
+  display: inline-block;
+}
+body .wrapper main .game-window .timer {
+  width: 200px;
+  height: 30px;
+  font-size: 25px;
+  color: red;
+  margin-left: 700px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+body .wrapper main .hide {
+  display: none;
+}
+body .wrapper main .hideout {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+body .wrapper main .gamefield {
+  position: relative;
+  width: 1400px;
+  height: 700px;
+  margin-bottom: 20px;
+  margin-left: 55px;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #e1e6d0;
+  border: 4px solid #ff133d;
+  border-radius: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+body .wrapper main .gamefield .container {
+  position: relative;
+  perspective: 800px;
+}
+body .wrapper main .gamefield .container .card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 3px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: transform 0.5s,  opacity  0.2s linear;
+}
+body .wrapper main .gamefield .container .card div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+body .wrapper main .gamefield .container .card .back {
+  font-weight: 700;
+  text-align: center;
+  background: #e7f2f9;
+  transform: rotateY(180deg);
+}
+body .wrapper main .gamefield .small {
+  width: 160px;
+  height: 180px;
+}
+body .wrapper main .gamefield .small img {
+  width: 160px;
+  height: 180px;
+}
+body .wrapper main .gamefield .medium {
+  width: 201px;
+  height: 200px;
+}
+body .wrapper main .gamefield .medium img {
+  width: 201px;
+  height: 200px;
+}
+body .wrapper main .gamefield .big {
+  width: 240px;
+  height: 300px;
+}
+body .wrapper main .gamefield .big img {
+  width: 240px;
+  height: 300px;
+}
+body .wrapper main .gamefield .flipped {
+  transform: rotateY(180deg);
+}
+body .wrapper main .gamefield .one-skirt {
+  background: url("../images/img11.jpg") no-repeat center;
+  background-size: cover;
+}
+body .wrapper main .gamefield .two-skirt {
+  background: url("../images/img22.jpg") no-repeat center;
+  background-size: cover;
+}
+body .wrapper main .gamefield .three-skirt {
+  background: url("../images/img33.jpg") no-repeat center;
+  background-size: cover;
+}
+body .wrapper main .stop-game {
+  width: 150px;
+  height: 75px;
+  border-radius: 3px;
+  background: linear-gradient(#6e7078, #515156) #6e7078;
+  box-shadow: 0 1px rgba(255, 255, 255, 0.2) inset, 0 3px 5px rgba(0, 1, 6, 0.5), 0 0 1px 1px rgba(0, 1, 6, 0.2);
+  font-size: 40px;
+  font-weight: 700;
+  color: #e2e2e2;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+  text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+  outline: none;
+  margin-left: 725px;
+}
+body footer {
+  margin-top: 0;
+  width: 1600px;
+  height: 100px;
+  background-color: #8dc4b7;
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7));
+}
+body footer h6 {
+  text-align: end;
+  color: rgba(249, 249, 249, 0.71);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+  font-size: 20px;
+  padding-top: 60px;
+  padding-right: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+}

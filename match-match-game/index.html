@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script defer src="dist/release.js"></script>
+   <!-- <script defer src="Game.js"></script>-->
+
+
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <h1> match-match game </h1>
+    </header>
+
+    <main>
+
+        <section class="welcome-part" id="welcome-part">
+            <form>
+                <div class="inputPlayerProfile">
+                    <div class="players-name-lastname-email">
+                        <h3>Player's profile </h3>
+
+                        <div class="input-data">
+                            <label> First Name</label>
+                            <input type="text" id="name" name="name" required placeholder="your first name*"/>
+                        </div>
+
+                        <div class="input-data">
+                            <label>Last Name </label>
+                            <input type="text" id="lastName" required placeholder="your last name*"/>
+                        </div>
+
+                        <div class="input-data">
+                            <label>Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your email*"/>
+                        </div>
+
+                    </div>
+
+                    <div class="game-difficulty">
+                        <h3> Game Difficulty </h3>
+
+                        <p><input name="level" type="radio" class="radio" checked="checked" value="10"/>Low 5 pairs</p>
+                        <p><input name="level" type="radio" class="radio" value="18"/>Medium 9 pairs</p>
+                        <p><input name="level" type="radio" class="radio" value="24"/>High 12 pairs</p>
+
+                    </div>
+
+                    <div class="shirt-cards">
+                        <h3> Shirt Cards </h3>
+                        <input name="shirt" type="radio" class="radioShirt" checked="checked" id="firstShirt"
+                               value="1"/> <label for="firstShirt"> <img src="images/img11.jpg"></label>
+
+                        <input name="shirt" type="radio" class="radioShirt" id="secondShirt" value="2"/>
+                        <label for="secondShirt"> <img src="images/img22.jpg"> </label>
+
+                        <input name="shirt" type="radio" class="radioShirt" id="thirdShirt" value="3"/> <label
+                            for="thirdShirt"> <img src="images/img33.jpg"> </label>
+                    </div>
+                </div>
+
+
+                <button type="submit" class="begin-new-game" id="startGameBtn">
+                    start
+                </button>
+
+            </form>
+
+            <div class="rules">
+                <h2> Welcome! </h2>
+                <h3>How to play</h3>
+                <p> The player turns over two cards, one at a time. The cards are kept in position. <br>
+                    If the cards match - they disappear. Goal is to remove all cards as quickly as possible
+                </p>
+
+                <div class="top10">
+                    <h3> TOP10 </h3>
+
+                    <div class="results">
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <section class="game-window" id="game-window">
+
+
+            <div class="timer">
+
+            </div>
+
+            <div class="gamefield"></div>
+
+
+            <button type="submit" class="stop-game" id="stopGameBtn" onsubmit="event.preventDefault();">
+                stop
+            </button>
+
+
+        </section>
+    </main>
+
+</div>
+
+
+<footer>
+    <h6> Developed by V.Kochubeyeva</h6>
+</footer>
+
+
+</body>
+</html>
