@@ -8,32 +8,34 @@ html body {
   height: 100%;
 }
 html body .radio-session {
-  width: 500px;
+  margin: 1px 200px;
+  font-size: 25px;
+}
+html .results-field {
+  width: 1000px;
   margin: 30px auto;
-  position: relative;
 }
-html body .radio-session input p {
-  width: 150px;
-  display: inline-block;
-  float: left;
-}
-html body .results-field table {
-  margin: 100px auto;
+html .results-field table {
+  margin: 10px auto;
   border: 1px solid black;
   border-collapse: collapse;
 }
-html body .results-field table thead tr {
+html .results-field table thead tr {
   border: 1px solid black;
 }
-html body .results-field table thead tr th {
+html .results-field table thead tr th {
   background: #b0e0e6;
   border: 1px solid black;
   padding: 5px;
   height: 30px;
 }
-html body .results-field table tbody tr {
+html .results-field table tbody tr {
+  border: 1px solid black;
+  height: 30px;
+}
+html .results-field table tbody tr td {
   border: 1px solid black;
 }
-html body .results-field table tbody tr td {
-  border: 1px solid black;
+html .result-charts {
+  margin: 30px auto;
 }

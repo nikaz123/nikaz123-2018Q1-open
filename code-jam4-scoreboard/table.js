@@ -1,6 +1,5 @@
 class Table {
     constructor() {
-
         this.table = this.createTable();
     }
 
@@ -24,23 +23,17 @@ class Table {
         for (let i = 0; i < 1 + results.puzzles.length + 2; i++) {
             let headTh = document.createElement('th');
             headTr.append(headTh);
-
-
         }
 
-        headTr.children[0].innerHTML = 'Name';
+        headTr.children[0].innerHTML = 'Name github';
 
         for (let i = 0; i < results.puzzles.length; i++) {
-
             headTr.children[i + 1].innerHTML = results.puzzles[i].name;
-
         }
-
 
         headTr.children[results.puzzles.length + 1].innerHTML = 'Total';
         headTr.children[results.puzzles.length + 2].innerHTML = 'Diff';
-        // headTr.children[1].innerHTML = 'Name Surname';
-        // headTr.children[2].innerHTML = 'Result';
+
         return tHead;
     }
 
@@ -54,11 +47,11 @@ class Table {
                 let bodyTd = document.createElement('td');
                 bodyTr.appendChild(bodyTd);
             }
-            ;
+
 
             bodyTr.children[0].innerHTML = users[i].displayName;
 
-            let total = 0
+            let total = 0;
             for (let k = 0; k < results.puzzles.length; k++) {
                 if (results.rounds[k].solutions[users[i].uid]) {
                     bodyTr.children[1 + k].innerHTML = results.rounds[k].solutions[users[i].uid].time.$numberLong;
