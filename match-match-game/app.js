@@ -159,6 +159,7 @@ function drawTop10(number) {
 
     for (let i = 0; i < 10; i++) {
         let oneRowTop10element = document.createElement('p');
+        if (arrayTop10.length!=0){
         oneRowTop10element.innerHTML = i+1 + '.' + '.................' + arrayTop10[i][0] + '.................' + arrayTop10[i][1]+ '.................' + function (number) {  switch (number) {
 
             case 10:
@@ -170,7 +171,7 @@ function drawTop10(number) {
             case 24:
                 return 'high';
 
-        }} (arrayTop10[i][3])+ '.................';
+        }} (arrayTop10[i][3])+ '.................';}
         resultsTop10.appendChild(oneRowTop10element);
     }
 
