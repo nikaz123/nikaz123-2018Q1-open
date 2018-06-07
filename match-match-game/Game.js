@@ -1,8 +1,10 @@
 export  const root = document.querySelector('.gamefield');
 
+import GLOBALS from   './globals';
+
 export default class Game {
 
-    constructor(number, picture) {
+    constructor(number, picture, callback) {
         this.number = number;
         this.picture = picture;
         this.url = null;
@@ -12,6 +14,7 @@ export default class Game {
         this.count = 0;
         this.point = number;
         this.size = null;
+        this.callback=callback;
 
     }
 
@@ -126,16 +129,17 @@ export default class Game {
     win() {
         root.classList.remove('wrapper');
         root.innerHTML = `<h2 class="win_title">You win!</h2>`;
-        clearInterval(interval);
+        clearInterval(GLOBALS.interval);
         let name = localStorage['name'];
-        let timestr = minute + ":" + second;
-        let seconds = minute * 60 + second;
+        let timestr = GLOBALS.minute + ":" + GLOBALS.second;
+        let seconds = GLOBALS.minute * 60 + GLOBALS.second;
         let record = [name, timestr, seconds, this.number];
-        top10.push(record);
+        GLOBALS.top10 =  JSON.parse(localStorage['top10']);
+        GLOBALS.top10.push(record);
 
         let curr_number = this.number;
 
-        let curr_diff = top10.filter(function (a) {
+        let curr_diff = GLOBALS.top10.filter(function (a) {
             return a[3] == curr_number
         });
 
@@ -144,14 +148,14 @@ export default class Game {
 
         curr_diff = curr_diff.slice(0, 10);
 
-        let other_diff = top10.filter(function (a) {
+        let other_diff = GLOBALS.top10.filter(function (a) {
             return a[3] !== curr_number
         });
 
-        top10 = other_diff.concat(curr_diff);
-        localStorage['top10'] = JSON.stringify(top10);
+        GLOBALS.top10 = other_diff.concat(curr_diff);
+        localStorage['top10'] = JSON.stringify(GLOBALS.top10);
 
-        drawTop10(curr_number);
+        this.callback(curr_number);
 
         function sortByTime(a, b) {
             return a[2] > b[2] ? 1 : -1;

@@ -3,17 +3,14 @@
 
 import Game, {root} from './Game.js';
 
+import GLOBALS from   './globals';
 
-let second = 0, minute = 0;
-let timer = document.querySelector(".timer");
-let interval;
+GLOBALS.timer=document.querySelector(".timer");
+GLOBALS.minute=0;
+GLOBALS.second=0;
+GLOBALS.top10=[];
 
-let picture = 0;
-let number = 0;
 
-let newgame = {};
-
-let top10 = [];
 
 
 
@@ -27,6 +24,33 @@ btnStartGame.addEventListener("click", startGame);
 let btnStopGame = document.getElementById('stopGameBtn');
 btnStopGame.addEventListener("click", stopGame);
 
+function drawTop10(number) {
+
+    let resultsTop10 = document.querySelector('.results');
+    resultsTop10.innerHTML = '';
+    let arrayTop10 = JSON.parse(localStorage['top10']);
+    arrayTop10=arrayTop10.filter(function(a){return a[3]==number});
+
+    for (let i = 0; i < 10; i++) {
+        let oneRowTop10element = document.createElement('p');
+        if (arrayTop10.length!=0 && arrayTop10[i] ){
+            oneRowTop10element.innerHTML = i+1 + '.' + '.................' + arrayTop10[i][0] + '.................' + arrayTop10[i][1]+ '.................' + function (number) {  switch (number) {
+
+                case 10:
+                    return 'low';
+
+                case 18:
+                    return 'medium';
+
+                case 24:
+                    return 'high';
+
+            }} (arrayTop10[i][3])+ '.................';}
+        resultsTop10.appendChild(oneRowTop10element);
+    }
+
+
+}
 
 function startGame(e) {
     e.preventDefault();
@@ -34,8 +58,8 @@ function startGame(e) {
     toggleWelcomePart();
     toggleGameWindow();
     startTimer();
-    newgame = new Game(Number.parseInt(number), Number.parseInt(picture));
-    newgame.init();
+    GLOBALS.newgame = new Game(Number.parseInt(GLOBALS.number), Number.parseInt(GLOBALS.picture),drawTop10);
+    GLOBALS.newgame.init();
 }
 
 // validate all input and checkbox
@@ -64,7 +88,7 @@ function validateGameConfig() {
     radioLevel.forEach(function (element) {
         if (element.checked) {
             flag = 1;
-            number = element.value
+            GLOBALS.number = element.value
         }
     });
     if (flag == 0) {
@@ -76,7 +100,7 @@ function validateGameConfig() {
     radioShirt.forEach(function (element) {
         if (element.checked) {
             flag = 1;
-            picture = element.value
+            GLOBALS.picture = element.value
         }
 
     });
@@ -91,16 +115,16 @@ function validateGameConfig() {
 function stopGame() {
     toggleGameWindow();
     toggleWelcomePart();
-    clearInterval(interval);
-    second = 0;
-    minute = 0;
-    timer.innerHTML = minute + " mins " + second + " secs";
-    newgame.cleanUp();
+    clearInterval(GLOBALS.interval);
+    GLOBALS.second = 0;
+    GLOBALS.minute = 0;
+    GLOBALS.timer.innerHTML = GLOBALS.minute + " mins " + GLOBALS.second + " secs";
+    GLOBALS.newgame.cleanUp();
 }
 
-if (typeof localStorage['top10'] == "undefined") localStorage['top10'] = JSON.stringify(top10);
+if (typeof localStorage['top10'] == "undefined") localStorage['top10'] = JSON.stringify(GLOBALS.top10);
 
-top10 = JSON.parse(localStorage['top10']);
+GLOBALS.top10 = JSON.parse(localStorage['top10']);
 
 drawTop10(10);
 
@@ -121,16 +145,16 @@ function toggleWelcomePart() {
 
 
 function startTimer() {
-    interval = setInterval(function () {
-        timer.innerHTML = minute + " mins " + second + " secs";
-        second++;
-        if (second == 60) {
-            minute++;
-            second = 0;
+    GLOBALS.interval = setInterval(function () {
+        GLOBALS.timer.innerHTML = GLOBALS.minute + " mins " + GLOBALS.second + " secs";
+        GLOBALS.second++;
+        if (GLOBALS.second == 60) {
+            GLOBALS.minute++;
+            GLOBALS.second = 0;
         }
-        if (minute == 60) {
+        if (GLOBALS.minute == 60) {
             hour++;
-            minute = 0;
+            GLOBALS.minute = 0;
         }
     }, 1000);
 }
@@ -150,34 +174,6 @@ function showError(message) {
 }
 
 
-function drawTop10(number) {
-
-    let resultsTop10 = document.querySelector('.results');
-    resultsTop10.innerHTML = '';
-    let arrayTop10 = JSON.parse(localStorage['top10']);
-    arrayTop10=arrayTop10.filter(function(a){return a[3]==number});
-
-    for (let i = 0; i < 10; i++) {
-        let oneRowTop10element = document.createElement('p');
-        if (arrayTop10.length!=0){
-        oneRowTop10element.innerHTML = i+1 + '.' + '.................' + arrayTop10[i][0] + '.................' + arrayTop10[i][1]+ '.................' + function (number) {  switch (number) {
-
-            case 10:
-               return 'low';
-
-            case 18:
-                return 'medium';
-
-            case 24:
-                return 'high';
-
-        }} (arrayTop10[i][3])+ '.................';}
-        resultsTop10.appendChild(oneRowTop10element);
-    }
-
-
-
-}
 
 
 
