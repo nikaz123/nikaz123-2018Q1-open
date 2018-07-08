@@ -1,0 +1,92 @@
+<div class="gameField  hide" id="game-window">
+
+    <div class="HUD">
+
+        <div class="heroHealth">
+            <p class="playerName Hero" id="hHeroName">Финн</p>
+
+            <div class="healthContainer Hero">
+                <div id="heroHealth" class="healthBar"></div>
+            </div>
+
+        </div>
+
+
+        <div class="monsterHealth">
+            <p class="playerName Monster" id="hMonsterName">Монстр</p>
+
+            <div class="healthContainer Monster">
+                <div id="monsterHealth" class="healthBar"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <canvas id="canvasForHero" width="550" height="400">
+
+    </canvas>
+
+    <canvas id="canvasForSpell" width="450" height="400">
+
+    </canvas>
+
+
+    <canvas id="canvasForMonster" width="400" height="400">
+
+    </canvas>
+
+
+    <div class="modalWindowofTask hide" id="window-spell">
+
+        <p>Выбери заклинание, чтобы победить монстра</p>
+        <input type="radio" class="taskMath" id="taskMath" name="tasks" title="ментальная магия"  autofocus>
+        <label for="taskMath"> <img src="./resourses/img/watericon.png" tabindex="4"> </label>
+
+        <input type="radio" class="taskMath" id="taskWordsAudio" name="tasks">
+        <label for="taskWordsAudio"><img src="./resourses/img/fireicon.png" tabindex="5"></label>
+
+        <input type="radio" class="taskMath" id="taskWordTranslate" name="tasks">
+        <label for="taskWordTranslate"><img src="./resourses/img/slimeicon.png"  tabindex="6"></label>
+
+        <input type="radio" class="taskMath" id="taskLettersShuffle" name="tasks" >
+        <label for="taskLettersShuffle"><img src="./resourses/img/lightningicon.png" tabindex="7"></label>
+
+        <input type="radio" class="taskMath" id="taskRandomMathOperation" name="tasks" >
+        <label for="taskRandomMathOperation"><img src="./resourses/img/plazmaicon.png" tabindex="8"></label>
+
+        <input type="radio" class="taskMath" id="taskAnimalTasks" name="tasks" >
+        <label for="taskAnimalTasks"><img src="./resourses/img/watericon.png" tabindex="9">x2</label>
+
+        <input type="radio" class="taskMath" id="taskExtraWords" name="tasks" >
+        <label for="taskExtraWords"><img src="./resourses/img/fireicon.png" tabindex="10">x2</label>
+
+        <input type="radio" class="taskMath" id="taskNextNumber" name="tasks" >
+        <label for="taskNextNumber"><img src="./resourses/img/slimeicon.png" tabindex="11">x2</label>
+
+        <input type="radio" class="taskMath" id="taskAntonym" name="tasks" >
+        <label for="taskAntonym"><img src="./resourses/img/lightningicon.png" tabindex="12">x2</label>
+
+        <input type="radio" class="taskMath" id="taskInputLetter" name="tasks" >
+        <label for="taskInputLetter"><img src="./resourses/img/plazmaicon.png" tabindex="13">x2</label>
+
+
+        <input type="radio" class="taskMath" id="taskCapitals" name="tasks" >
+        <label for="taskCapitals"><img src="./resourses/img/watericon.png" tabindex="14">x3</label>
+
+        <input type="radio" class="taskMath" id="taskFinishTheSentence" name="tasks" >
+        <label for="taskFinishTheSentence"><img src="./resourses/img/fireicon.png" tabindex="15">x3</label>
+
+        <input type="radio" class="taskMath" id="taskAuthorOfBook" name="tasks" >
+        <label for="taskAuthorOfBook"><img src="./resourses/img/slimeicon.png" tabindex="16">x3</label>
+
+        <input type="radio" class="taskMath" id="taskItsBaby" name="tasks" >
+        <label for="taskItsBaby"><img src="./resourses/img/lightningicon.png" tabindex="17">x3</label>
+
+        <input type="radio" class="taskMath" id="taskTrueOrFalse" name="tasks" >
+        <label for="taskTrueOrFalse"><img src="./resourses/img/plazmaicon.png" tabindex="18">x3</label>
+
+
+    </div>
+
+</div>

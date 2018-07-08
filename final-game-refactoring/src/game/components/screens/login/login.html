@@ -1,0 +1,33 @@
+<form name="optionsForm" class="options-form hide" id="options-form" >
+    <h2>Заполни поля для начала игры</h2>
+    <fieldset class="profile-field">
+
+        <legend> Ты играешь за мальчика Финна и твой лучший друг собака Джейк.
+
+            Чтобы победить монстра, необходимо решить задания и набрать больше очков.
+
+            Для начала игры тебе необходимо придумать имя и пароль.
+
+
+        </legend>
+
+
+        <label for="firstNameInput" class="form-label">Имя
+            <input type="text" class="form-input" id="firstNameInput" name="firstNameInput"
+                   placeholder="Введи имя"
+                   required  tabindex="1" autofocus>
+        </label>
+
+
+        <label for="passwordInput" class="form-label">Пароль
+            <input type="password" maxlength="25" size="20" name="password" class="form-input" id="passwordInput"
+
+                   placeholder="Введи пароль" required  tabindex="2">
+        </label>
+
+    </fieldset>
+
+
+    <button type="submit" class="form-btn" id="begin-btn" tabindex="3">Начать игру</button>
+
+</form>
