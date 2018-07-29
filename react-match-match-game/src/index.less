@@ -1,0 +1,411 @@
+@font-face {
+  font-family: 'Acme';
+  src: url('./resources/fonts/acme/Acme-Regular.ttf');
+  font-weight: 400;
+}
+
+
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('./resources/fonts/josefin/JosefinSans-Regular.ttf');
+  font-weight: 400;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+
+}
+
+body {
+  background: url(./resources/img/sea_pattern_1_big.png) repeat center;
+  width: 1600px;
+  margin: 30px auto;
+  height: 1000px;
+
+  #root {
+
+    h2 {
+      text-align: center;
+      font-size: 45px;
+      padding-top: 30px;
+      font-family: 'Acme', sans-serif;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 30px;
+      font-family: 'Acme', sans-serif;
+    }
+    .wrapper {
+      width: 1600px;
+      height: 900px;
+      background-color: rgb(141, 196, 183);
+      position: relative;
+      min-height: calc(100% - 320px);
+
+      /*HEADER*/
+      header {
+        width: 1600px;
+        height: 100px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0));
+
+        h1 {
+          font-size: 60px;
+          font-family: 'Acme', sans-serif;
+          color: rgba(249, 249, 249, 0.71);
+          text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+          text-align: center;
+          text-transform: uppercase;
+          padding-top: 20px;
+        }
+      }
+      /*MAIN*/
+
+      /*   SECTION WELCOME-PART*/
+
+      main {
+
+        .welcomePart {
+          display: inline-block;
+          width: 1600px;
+          // height: 800px;
+          position: relative;
+
+          form {
+            float: left;
+            width: 870px;
+            height: 800px;
+
+            .inputPlayerProfile {
+              width: 870px;
+              height: 777px;
+              display: inline-block;
+              float: left;
+
+              .players-name-lastname-email {
+                height: 250px;
+                font-size: 16px;
+                margin-top: 40px;
+                margin-left: 40px;
+                font-family: 'Josefin Sans', sans-serif;
+                h3 {
+                  width: 550px;
+                }
+                .input-data {
+                  width: 331px;
+                  height: 50px;
+                  margin-top: 20px;
+
+                  label {
+                    font-size: 25px;
+                    margin-left: 40px;
+                    width: 300px;
+                    height: 30px;
+                    margin-right: 15px;
+                  }
+                  input {
+                    border: solid 2px #f9f9f9;
+                    border-radius: 8px;
+                    background-color: #e2e2e2;
+                    padding-left: 10px;
+                    height: 25px;
+                    margin-left: 40px;
+                  }
+                }
+
+                .game-difficulty {
+                  margin-left: 40px;
+                  p {
+                    font-family: 'Josefin Sans', sans-serif;
+                    height: 40px;
+                    font-size: 30px;
+
+                    input {
+                      margin-right: 10px;
+                    }
+                  }
+                  h3 {
+                    margin-top: 50px;
+                    margin-bottom: 20px;
+                    width: 550px;
+                  }
+                }
+
+                .shirt-cards {
+                  margin-left: 40px;
+                  h3 {
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                    width: 550px;
+                  }
+                  label {
+                    display: inline-block;
+                    margin: 0 4px;
+                    width: 120px;
+                    height: 150px;
+
+                    img {
+                      width: 120px;
+                      height: 150px;
+                      margin-right: 25px;
+                    }
+                  }
+
+                  .radioShirt {
+                    width: 150px;
+                    display: inline-block;
+                    float: left;
+                    margin-top: 50px;
+                    margin-right: 10px;
+                    margin-bottom: 15px;
+                    visibility: hidden;
+                    position: absolute;
+                    cursor: pointer;
+                    border: 2px solid transparent;
+                    &:checked + label {
+                      border: 4px solid #f00;
+                    }
+                  }
+
+                }
+              }
+            }
+            .begin-new-game {
+              margin-left: 720px;
+              width: 150px;
+              height: 75px;
+              display: inline-block;
+              float: right;
+              font-size: 40px;
+              font-weight: 700;
+              color: rgb(226, 226, 226);
+              text-decoration: none;
+              font-family: 'Josefin Sans', sans-serif;
+              text-shadow: 0 -1px 2px rgba(0, 0, 0, .2);
+              outline: none;
+              border-radius: 3px;
+              background: linear-gradient(rgb(110, 112, 120), rgb(81, 81, 86)) rgb(110, 112, 120);
+              box-shadow: 0 1px rgba(255, 255, 255, .2) inset,
+              0 3px 5px rgba(0, 1, 6, .5),
+              0 0 1px 1px rgba(0, 1, 6, .2);
+
+              .begin-new-game:hover:not(:active) {
+                background: linear-gradient(rgb(126, 126, 134), rgb(70, 71, 76)) rgb(126, 126, 134);
+              }
+
+              .begin-new-game:active {
+                top: 1px;
+                background: linear-gradient(rgb(76, 77, 82), rgb(56, 57, 62)) rgb(76, 77, 82);
+                box-shadow: 0 0 1px rgba(0, 0, 0, .5) inset,
+                0 2px 3px rgba(0, 0, 0, .5) inset,
+                0 1px 1px rgba(255, 255, 255, .1);
+              }
+            }
+          }
+          .rules {
+            display: inline-block;
+            width: 550px;
+            height: 800px;
+            float: left;
+            margin-left: 70px;
+
+            h3 {
+              padding-top: 50px;
+            }
+            p {
+              padding-top: 25px;
+              font-size: 25px;
+              text-align: center;
+              font-family: 'Josefin Sans', sans-serif;
+            }
+
+            .top10 {
+              display: inline-block;
+              float: left;
+              width: 550px;
+              .results {
+                div {
+                  table {
+
+                    width: 550px;
+                    border-collapse: collapse;
+
+                    td, th {
+                      padding: 3px;
+                      border: 1px solid black;
+                      background-color: antiquewhite;
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+          }
+          }
+          /*SECTION GAME-WINDOW*/
+
+          .gameWindow {
+            display: inline-block;
+            .timer {
+              width: 200px;
+              height: 30px;
+              font-size: 25px;
+              color: red;
+              margin-left: 700px;
+              font-family: 'Josefin Sans', sans-serif;
+            }
+          }
+          /*  .hide {
+              display: none;
+            }*/
+          .hideout {
+            // display: none;
+            // visibility: hidden;
+            opacity: 0;
+            // transition: visibility 1s 2s, opacity 1s 2s linear;
+            transform: rotateY(180deg);
+
+          }
+          .gamefield {
+            position: relative;
+            width: 1400px;
+            height: 700px;
+            margin-bottom: 20px;
+            margin-left: 55px;
+            padding-top: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: #e1e6d0;
+            border: 4px solid #ff133d;
+            border-radius: 7px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+
+            .container {
+              position: relative;
+              perspective: 800px;
+              .card {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border: 2px solid black;
+                border-radius: 3px;
+                transform-style: preserve-3d;
+                cursor: pointer;
+                transition: transform 0.5s, opacity 0.2s linear;
+                .front {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  // backface-visibility: hidden;
+                }
+                .back {
+                  font-weight: 700;
+                  text-align: center;
+                  background: #e7f2f9;
+                  transform: rotateY(180deg);
+                }
+              }
+              .one-skirt {
+                background: url("./resources/img/img11.jpg") no-repeat center;
+                background-size: cover;
+              }
+              .two-skirt {
+                background: url("./resources/img/img22.jpg") no-repeat center;
+                background-size: cover;
+              }
+              .three-skirt {
+                background: url("./resources/img/img33.jpg") no-repeat center;
+                background-size: cover;
+              }
+            }
+            .small {
+              width: 160px;
+              height: 180px;
+              img {
+                width: 160px;
+                height: 180px;
+              }
+            }
+            .medium {
+              width: 201px;
+              height: 200px;
+
+              img {
+                width: 201px;
+                height: 200px;
+              }
+            }
+
+            .big {
+              width: 240px;
+              height: 300px;
+              img {
+                width: 240px;
+                height: 300px;
+              }
+            }
+            .flipped {
+
+              transform: rotateY(180deg);
+
+            }
+
+          }
+
+          /* BUTTON STOP*/
+
+          .stop-game {
+            width: 150px;
+            height: 75px;
+            border-radius: 3px;
+            background: linear-gradient(rgb(110, 112, 120), rgb(81, 81, 86)) rgb(110, 112, 120);
+            box-shadow: 0 1px rgba(255, 255, 255, .2) inset,
+            0 3px 5px rgba(0, 1, 6, .5),
+            0 0 1px 1px rgba(0, 1, 6, .2);
+            font-size: 40px;
+            font-weight: 700;
+            color: rgb(226, 226, 226);
+            text-decoration: none;
+            font-family: 'Josefin Sans', sans-serif;
+            text-shadow: 0 -1px 2px rgba(0, 0, 0, .2);
+            outline: none;
+            margin-left: 725px;
+          }
+        }
+      }
+
+      /*   FOOTER*/
+
+      footer {
+        margin-top: 0;
+        width: 1600px;
+        height: 100px;
+        background-color: rgb(141, 196, 183);
+        background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7));
+
+        h6 {
+          text-align: end;
+          color: rgba(249, 249, 249, 0.71);
+          text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+          font-size: 20px;
+          padding-top: 60px;
+          padding-right: 20px;
+          font-family: 'Josefin Sans', sans-serif;
+        }
+      }
+    }
+
+  }
+
